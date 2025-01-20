@@ -4,4 +4,8 @@ interface Dog {
 
 let cat = { purr: true };
 
-let dog = cat as Dog;
+// Same as unknown, its dangerous
+let dog = cat as any as Dog;
+
+// Unsafe, forcing it to be a dog
+let dog1 = cat as unknown as Dog;
