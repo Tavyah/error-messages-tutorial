@@ -2,4 +2,8 @@ const searchParams = new URLSearchParams(window.location.search);
 
 const id = searchParams.get("id");
 
-console.log(id.toUpperCase());
+if(typeof id === 'string') {
+    console.log(id.toUpperCase()); }
+else {
+    console.log('id: ' + id)
+}
